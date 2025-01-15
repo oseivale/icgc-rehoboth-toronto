@@ -282,7 +282,6 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    margin-top: 3rem;
   }
 
   .cartItemImage {
