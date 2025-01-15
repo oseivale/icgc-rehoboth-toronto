@@ -162,7 +162,7 @@
   right: 1rem;
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 3rem;
   cursor: pointer;
   color: var(--naamani-purple);
 }
@@ -282,6 +282,7 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    margin-top: 3rem;
   }
 
   .cartItemImage {

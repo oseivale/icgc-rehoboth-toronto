@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import { Hamburger } from "@/app/icons/hamburger";
 import Image from "next/image";
+import { Close } from "@/app/icons/close";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -64,7 +65,7 @@ export default function Navigation() {
             className={styles.closeButton}
             onClick={() => setIsNavOpen(false)}
           >
-            ✕
+            <Close />
           </button>
           <nav className={`${styles.navLinks}`}>
             <Link href="/about" className={styles.navLink}>
