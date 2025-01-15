@@ -32,8 +32,8 @@ const Footer = () => (
           </Link>
         </div>
           <p>
-            Lorem Ipsum is simply dummy text of printing and typesetting
-            industry. Lorem Ipsum has been the industry's.
+            {`Lorem Ipsum is simply dummy text of printing and typesetting
+            industry. Lorem Ipsum has been the industry's.`}
           </p>
           <div className={styles.socialIcons}>
             <Link href="#">
