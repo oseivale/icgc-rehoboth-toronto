@@ -1,8 +1,8 @@
 
 export default function BlogArticle() {
     return (
-      <div style={{paddingTop: '5rem'}}>
-        <h1>BLOG ARTICLE</h1>
+      <div style={{paddingTop: '7rem'}}>
+        <h1 className="pageContainer">BLOG ARTICLE</h1>
       </div>
     );
   }

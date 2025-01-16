@@ -1,0 +1,56 @@
+.marqueeContainer {
+    background-color: #fcd34d; /* Yellow background */
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .marquee {
+    display: flex;
+    animation: scroll 11s linear infinite; /* Smooth scrolling animation */
+  }
+  
+  .marqueeContent {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent shrinking of the content */
+  }
+  
+  .text {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2d422d; /* Dark green text color */
+    margin: 0 20px;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    color: #2d422d; /* Dark green icon color */
+    margin: 0 10px;
+  }
+  
+  /* Scrolling animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .text {
+      font-size: 1rem; /* Slightly smaller text on mobile */
+      margin: 0 10px;
+    }
+  
+    .icon {
+      font-size: 1.2rem;
+      margin: 0 5px;
+    }
+  }

@@ -23,6 +23,12 @@ body {
   margin: 0;
 }
 
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
 
 
 p {
@@ -45,4 +51,12 @@ h6 {
 .main {
   padding-top: 4rem; /* Offset for fixed header */
   font-family: var(--font-nunito), sans-serif;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
 }
