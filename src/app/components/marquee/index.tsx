@@ -28,6 +28,7 @@ const MarqueeBanner = () => {
             <span className={styles.text}>LOVE YOUR NEIGHBOUR AS YOURSELF</span>
             <span className={styles.icon}>✸</span>
           </div>
+          
         </div>
       </div>
     );

@@ -38,7 +38,7 @@
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    /* letter-spacing: 2px; */
+    letter-spacing: -1px;
     margin: 0px;
     opacity: 0;
     animation: fadeInText 2.5s ease-in-out forwards;
@@ -107,7 +107,7 @@
   }
   
   .liveButton {
-    background-color: #ffce00; /* Yellow */
+    background-color: var(--rehoboth-yellow); /* Yellow */
     color: #2d422d; /* Dark green */
   }
   
