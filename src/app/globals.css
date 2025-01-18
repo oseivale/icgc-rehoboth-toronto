@@ -14,7 +14,7 @@
   --naamani-grey-extra-light: #f7f8f8;
   --nammani-font-dark: #333333;
 
-  --font-default: var(--font-fira-sans); /* Default font */
+  --font-default: 'Fira Sans', 'sans-serif'; /* Default font */
 }
 
 body {

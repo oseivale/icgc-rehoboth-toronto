@@ -1,0 +1,171 @@
+/* Section Styling */
+.sermonsSection {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: var(--font-fira-sans) !important;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .subheading {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2d422d; /* Dark Green */
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #2d422d; /* Dark Green */
+  }
+  
+  .highlight {
+    color: #ffce00; /* Yellow Highlight */
+  }
+  
+  /* Sermon Grid */
+  .sermonGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sermonCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    height: 260px;
+  }
+  
+  .dateBadge {
+    background-color: #2d422d; /* Dark Green */
+    color: #ffffff;
+    border-radius: 10px 0;
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .dateBadge p{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  .cardTitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2d422d;
+    margin: 30px 0 10px;
+  }
+  
+  .cardDescription {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #2d422d;
+    margin-bottom: 15px;
+  }
+  
+  .separator {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 15px 0;
+  }
+  
+  .watchButton {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #2d422d; /* Dark Green */
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    width: 50%;
+  }
+  
+  .watchButton:hover {
+    background-color: #3a533a; /* Lighter Green */
+  }
+  
+  .playIcon {
+    font-size: 1.2rem;
+  }
+  
+  /* Modal */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #2d422d;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .sermonGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .video {
+      height: 300px;
+    }
+  }
