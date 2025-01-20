@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './styles.module.css';
+import { Play } from '@/app/icons/play';
 
 const SermonsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,7 +45,8 @@ const SermonsSection = () => {
               className={styles.watchButton}
               onClick={() => openModal(sermon.videoUrl)}
             >
-              Watch Now <span className={styles.playIcon}>&#9658;</span>
+              {/* Watch Now <span className={styles.playIcon}>&#9658;</span> */}
+              Watch Now <Play />
             </button>
           </div>
         ))}
