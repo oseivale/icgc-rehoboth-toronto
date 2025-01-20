@@ -46,7 +46,7 @@ const SermonsSection = () => {
               onClick={() => openModal(sermon.videoUrl)}
             >
               {/* Watch Now <span className={styles.playIcon}>&#9658;</span> */}
-              Watch Now <Play />
+              Watch Now <span className={styles.playIcon}><Play /></span>
             </button>
           </div>
         ))}
@@ -63,9 +63,12 @@ const SermonsSection = () => {
               frameBorder="0"
               className={styles.video}
             ></iframe>
-            <button className={styles.closeButton} onClick={closeModal}>
+            <div className={styles.closeButtonWrapper}>
+               <button className={styles.closeButton} onClick={closeModal}>
               &#10005;
-            </button>
+            </button> 
+            </div>
+            
           </div>
         </div>
       )}
