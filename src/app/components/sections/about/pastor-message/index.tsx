@@ -17,10 +17,10 @@ export const MessageFromPastor = () => {
             A MESSAGE FROM <span className={styles.highlight}>OUR PASTOR</span>
           </h1>
           <p className={styles.description}>
-            We are a vibrant community of believers dedicated to worship, fellowship, and service. Our mission is to share God's love, grow in faith, and make a positive impact in the world through compassionate outreach and meaningful connections.
+            {`We are a vibrant community of believers dedicated to worship, fellowship, and service. Our mission is to share God's love, grow in faith, and make a positive impact in the world through compassionate outreach and meaningful connections.`}
           </p>
           <p className={styles.description}>
-            Our church is a welcoming place where everyone can find support, inspiration, and a sense of belonging. Together, we strive to live out our faith and make a difference.
+            {`Our church is a welcoming place where everyone can find support, inspiration, and a sense of belonging. Together, we strive to live out our faith and make a difference.`}
           </p>
           <div className={styles.signature}>
             <p className={styles.name}>Bethmound Mensah</p>
