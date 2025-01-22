@@ -31,6 +31,7 @@
 
 import Link from 'next/link';
 import styles from './styles.module.css';
+import { Arrow } from '@/app/icons/arrow';
 
 const HeroBanner = () => {
 
@@ -54,10 +55,11 @@ const HeroBanner = () => {
         </p>
         <div className={styles.heroButtons}>
           <button className={`${styles.heroButton} ${styles.liveButton}`}>
-            Join Live <span className={styles.arrow}>&#8594;</span>
+            Join Live <span className={styles.arrow}><Arrow /></span>
           </button>
           <Link href={"#"} className={`${styles.heroButton} ${styles.learnButton}`}>
-            Learn More <span className={styles.arrow}>&#8594;</span>
+            {/* Learn More <span className={styles.arrow}>&#8594;</span> */}
+            Learn more  <span className={styles.arrow}><Arrow /></span>
           </Link>
         </div>
       </div>

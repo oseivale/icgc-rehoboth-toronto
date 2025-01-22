@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from './styles.module.css';
 import { Flower } from '@/app/icons/flower';
+import { Arrow } from '@/app/icons/arrow';
 
 const MissionSection = () => {
   return (
@@ -17,9 +18,20 @@ const MissionSection = () => {
           <blockquote className={styles.blockquote}>
             {`Our mission is to share God's love and grace by fostering spiritual growth, serving our community with compassion, and building meaningful relationships. We are dedicated to living out our faith through worship, outreach, and impactful service.`}
           </blockquote>
-          <Link href={'#'} className={styles.button}>
+          {/* <Link href={'#'} className={styles.button}>
             Contact Us <span className={styles.arrow}>&#8594;</span>
-          </Link>
+          </Link> */}
+
+          <Link
+                href={"#"}
+                className={`${styles.button} ${styles.learnButton}`}
+              >
+                {/* Learn More <span className={styles.arrow}>&#8594;</span> */}
+                Contact Us
+                <span className={styles.arrow}>
+                  <Arrow />
+                </span>
+              </Link>
         </div>
         <div className={styles.imageContent}>
           <img

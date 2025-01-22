@@ -1,0 +1,84 @@
+/* Section Container */
+.faithSection {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .subheading {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2d422d; /* Dark Green */
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #2d422d; /* Dark Green */
+  }
+  
+  .highlight {
+    color: #ffce00; /* Yellow Highlight */
+  }
+  
+  /* Grid Layout */
+  .faithGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Card Styling */
+  .card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .iconContainer {
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cardTitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2d422d; /* Dark Green */
+    margin-bottom: 10px;
+  }
+  
+  .cardDescription {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    color: #2d422d; /* Dark Green */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .faithGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .heading {
+      font-size: 1.8rem;
+    }
+  
+    .cardDescription {
+      font-size: 0.9rem;
+    }
+  }

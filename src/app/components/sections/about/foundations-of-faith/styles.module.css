@@ -1,0 +1,118 @@
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: start;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordionContainer {
+    text-align: left;
+  }
+  
+  .heading {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d422d; /* Dark Green */
+    margin-bottom: 30px;
+  }
+  
+  .highlight {
+    color: #ffce00; /* Yellow Highlight */
+  }
+  
+  .accordion {
+    margin-top: 20px;
+  }
+  
+  .accordionItem {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+    overflow: hidden;
+  }
+  
+  .accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    cursor: pointer;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2d422d;
+    transition: color 0.3s ease;
+  }
+  
+  .accordionHeader:hover {
+    color: #ffce00; /* Yellow Highlight on Hover */
+  }
+  
+  .icon {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+  }
+  
+  /* Accordion Content with Smooth Animation */
+  .accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 0;
+  }
+  
+  .accordionContent p {
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #2d422d;
+    line-height: 1.6;
+  }
+  
+  .activeContent {
+    max-height: 100px; /* Adjust based on the amount of content */
+    padding: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  
+    .image {
+      width: 90%;
+    }
+  
+    .heading {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .accordionContainer {
+      /* text-align: center; */
+    }
+  }

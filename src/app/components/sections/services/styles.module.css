@@ -60,6 +60,11 @@
   .card:hover {
     transform: scale(1.05);
     border: 4px solid var(--rehoboth-yellow);
+    background-color: #fcf5c3;
+  }
+
+  .card:hover .iconContainer {
+    background-color: var(--rehoboth-yellow);
   }
   
   .iconContainer {

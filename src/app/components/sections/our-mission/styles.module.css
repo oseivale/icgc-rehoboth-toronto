@@ -70,35 +70,116 @@
 
 /* Button */
 .button {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #ffce00; /* Yellow */
-  color: #2d422d; /* Dark Green */
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease-in-out;
-  max-width: 190px;
-  text-decoration: none;
-}
-
-.button:hover {
-  background-color: #ffe34d; /* Lighter Yellow */
-}
-
-.arrow {
-  font-size: 1rem;
-  transition: transform 0.3s ease-in-out;
-}
-
-.button:hover .arrow {
-  transform: translateX(5px);
-}
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #ffce00; /* Yellow */
+    color: #2d422d; /* Dark Green */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    width: 140px;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: var(--rehoboth-dark-green); /* Lighter Yellow */
+    color: var(--rehoboth-white);
+  }
+  
+  .arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--rehoboth-white);
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .button:hover .arrow {
+    transform: translateX(5px);
+  }
+  
+  /* Info Card */
+  .infoCard {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .infoCardsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .infoCardImage {
+    height: 175px;
+    border-radius: 15px;
+  }
+  
+  /* Arrow Styling */
+  .heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .heroButton {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    opacity: 0;
+    animation: fadeInText 4s ease-in-out forwards;
+    min-width: 130px;
+    background-color: yellow;
+  }
+  
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transform: rotate(-45deg); /* Initial rotation */
+    transition: transform 0.3s ease-in-out; /* Smooth rotation on hover */
+  }
+  
+  .learnButton .arrow {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    color: var(--rehoboth-dark-green);
+  }
+  
+  .liveButton .arrow {
+    background-color: #fff;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    color: var(--rehoboth-dark-green);
+  }
+  
+  .heroButton:hover .arrow {
+    transform: rotate(0deg); /* Rotate to 0 degrees on hover */
+  }
+  
 
 /* Image Content */
 .imageContent {

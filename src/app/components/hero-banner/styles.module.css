@@ -103,7 +103,7 @@
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
     opacity: 0;
     animation: fadeInText 4s ease-in-out forwards;
-    min-width: 130px;
+    width: 160px;
   }
   
   .liveButton {
