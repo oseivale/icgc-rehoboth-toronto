@@ -82,6 +82,18 @@
   font-weight: 600;
 }
 
+.backToHome {
+    margin: .5rem;
+    text-decoration: none;
+}
+
+.backToHome span{
+    color: var(--rehoboth-white);
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
 .navLink:hover {
   text-decoration: underline;
 }

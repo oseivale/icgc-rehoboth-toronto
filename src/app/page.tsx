@@ -1,10 +1,10 @@
 import HeroBanner from "./components/hero-banner";
 import MarqueeBanner from "./components/marquee";
-import EventSection from "./components/sections/events";
-import SermonsSection from "./components/sections/latest-sermons";
-import MissionSection from "./components/sections/our-mission";
-import ServicesSection from "./components/sections/services";
-import HomePageSection from "./components/sections/worship-with-us";
+import EventSection from "./components/sections/home/events";
+import SermonsSection from "./components/sections/home/latest-sermons";
+import MissionSection from "./components/sections/home/our-mission";
+import ServicesSection from "./components/sections/home/services";
+import HomePageSection from "./components/sections/home/worship-with-us";
 
 export default function Home() {
   return (

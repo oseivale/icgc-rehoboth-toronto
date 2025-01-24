@@ -50,7 +50,7 @@
     font-family: 'Fira Sans', sans-serif;
     font-size: 3rem;
     font-weight: bold;
-    line-height: 1.4;
+    line-height: 1.1;
     margin: 20px 0;
   }
   
@@ -93,6 +93,7 @@
     font-size: 1rem;
     font-weight: bold;
     border: none;
+    box-sizing: border-box;
     border-radius: 25px;
     padding: 12px 18px;
     display: flex;
@@ -103,7 +104,8 @@
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
     opacity: 0;
     animation: fadeInText 4s ease-in-out forwards;
-    width: 160px;
+    width: 190px;
+    /* width: 100%; */
   }
   
   .liveButton {

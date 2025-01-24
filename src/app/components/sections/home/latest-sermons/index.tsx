@@ -18,9 +18,9 @@ const SermonsSection = () => {
     setVideoUrl('');
   };
   const sermons = [
-    { id: 1, date: '01 DEC', title: "OVERCOMING LIFE'S CHALLENGES", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', videoUrl: 'https://www.youtube.com/embed/LbL9zLHg8uQ' },
-    { id: 2, date: '08 DEC', title: "OVERCOMING LIFE'S CHALLENGES", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', videoUrl: 'https://www.youtube.com/embed/LbL9zLHg8uQ' },
-    { id: 3, date: '15 DEC', title: "OVERCOMING LIFE'S CHALLENGES", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', videoUrl: 'https://www.youtube.com/embed/LbL9zLHg8uQ' },
+    { id: 1, date: '01 DEC', title: "OVERCOMING LIFE'S CHALLENGES", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', videoUrl: 'https://www.youtube.com/embed/z6JqpuBTOcg?si=Et1_CL6GKJQ27yr7' },
+    { id: 2, date: '08 DEC', title: "OVERCOMING LIFE'S CHALLENGES", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', videoUrl: 'https://www.youtube.com/embed/z6JqpuBTOcg?si=Et1_CL6GKJQ27yr7' },
+    { id: 3, date: '15 DEC', title: "OVERCOMING LIFE'S CHALLENGES", description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', videoUrl: 'https://www.youtube.com/embed/z6JqpuBTOcg?si=Et1_CL6GKJQ27yr7' },
   ];
 
   return (

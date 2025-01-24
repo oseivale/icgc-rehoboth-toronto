@@ -16,7 +16,7 @@ export const ServicesSection = () => {
     {
       id: 2,
       icon: <Office />,
-      title: "CHURCH DEPARTMENTS",
+      title: "DEPARTMENTS & MINISTRIES",
       description:
         "Join us for special events, including holiday services, picnics, and community fundraisers throughout the year.",
     },

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Hamburger } from "@/app/icons/hamburger";
 import Image from "next/image";
 import { Close } from "@/app/icons/close";
+import { Home } from "@/app/icons/home";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -79,6 +80,10 @@ export default function Navigation() {
             </Link>
             <Link href="/contact" className={styles.navLink}>
               Contact Us
+            </Link>
+            <Link href="/" className={styles.backToHome}>
+                <span><Home /> Back to Home</span>
+              
             </Link>
           </nav>
         </div>
