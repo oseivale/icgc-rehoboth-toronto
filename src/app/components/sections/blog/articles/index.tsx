@@ -3,7 +3,6 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 
-
 export const CardGrid = () => {
   const cards = [
     // {
@@ -67,29 +66,29 @@ export const CardGrid = () => {
       link: "#",
     },
     {
-        image:
-          "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-  
-        title: "This Week’s Sermon Embracing Forgiveness",
-        date: "2025-01-22",
-        link: "#",
-      },
-      {
-        image:
-          "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-  
-        title: "Join Us For The Christmas Eve Candlelight Service",
-        date: "2025-01-31",
-        link: "#",
-      },
-      {
-        image:
-          "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-  
-        title: "New Bible Study Series Starts This Sunday",
-        date: "2025-02-15",
-        link: "#",
-      },
+      image:
+        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
+
+      title: "This Week’s Sermon Embracing Forgiveness",
+      date: "2025-01-22",
+      link: "#",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
+
+      title: "Join Us For The Christmas Eve Candlelight Service",
+      date: "2025-01-31",
+      link: "#",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
+
+      title: "New Bible Study Series Starts This Sunday",
+      date: "2025-02-15",
+      link: "#",
+    },
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -143,6 +142,10 @@ export const CardGrid = () => {
     // </section>
 
     <section className={styles.cardGridSection}>
+      <h1 className={styles.heading}>
+        Search for an article by title, 
+        <span className={styles.highlight}> or filter by month</span>
+      </h1>
       <div className={styles.filters}>
         <input
           type="text"
