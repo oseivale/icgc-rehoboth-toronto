@@ -3,9 +3,6 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 
-type Test = {
-    handleSearch: (e: React.ChangeEvent<HTMLSelectElement>) => void
-}
 
 export const CardGrid = () => {
   const cards = [
