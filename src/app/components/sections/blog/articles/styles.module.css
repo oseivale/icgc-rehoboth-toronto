@@ -19,6 +19,7 @@
     background-color: #e0e0e0;
     padding: 1.5rem;
     border-radius: 10px;
+    /* box-sizing: border-box; */
   }
   
   .searchInput {
@@ -118,6 +119,7 @@
     font-size: 1.1rem;
     font-family: var(--font-default);
     color: var(--rehoboth-dark-green);
+    border-radius: 5px;
   }
   
   .pageButton:hover {
@@ -128,4 +130,22 @@
     background-color: #2d422d; /* Dark Green */
     color: var(--rehoboth-white);
     border: 1px solid #e0e0e0;
+  }
+
+  .monthFilterLabel {
+    text-align: left;
+  }
+
+  @media screen and (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .searchInput {
+        width: 95%;
+    }
+
+    .filterDropdown {
+        width: 100%;
+    }
   }

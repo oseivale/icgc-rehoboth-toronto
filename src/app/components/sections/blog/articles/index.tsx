@@ -151,6 +151,9 @@ export const CardGrid = () => {
           onChange={handleSearch}
           className={styles.searchInput}
         />
+        {/* <label className={styles.monthFilterLabel}>
+            Filter By Month
+        </label> */}
         <select
           value={monthFilter}
           onChange={handleFilter}
