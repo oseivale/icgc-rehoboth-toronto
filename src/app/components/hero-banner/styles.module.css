@@ -86,6 +86,8 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    width: 50%;
+    margin: 0 auto;
   }
   
   .heroButton {
@@ -104,8 +106,8 @@
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
     opacity: 0;
     animation: fadeInText 4s ease-in-out forwards;
-    width: 190px;
-    /* width: 100%; */
+    /* width: 190px; */
+    width: 100%;
   }
   
   .liveButton {
