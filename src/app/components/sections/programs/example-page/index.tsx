@@ -3,10 +3,24 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 
+type Resource = {
+  type: string;
+  url: string;
+  label: string;
+};
+
+type Session = {
+  title: string;
+  date: string;
+  videoUrl: string;
+  summary: string;
+  resources: Resource[];
+};
+
 const BibleStudyPage = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [activeSession, setActiveSession] = useState(null);
+  const [activeSession, setActiveSession] = useState<Session | null>(null);
 
   const resources = [
     {
@@ -26,7 +40,7 @@ const BibleStudyPage = () => {
     },
   ];
 
-  const sessions = [
+  const sessions: Session[] = [
     {
       title: "Understanding Grace - Bible Study Session",
       date: "February 2, 2025",
@@ -53,7 +67,7 @@ const BibleStudyPage = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const openModal = (session) => {
+  const openModal = (session: Session) => {
     setActiveSession(session);
     setModalOpen(true);
   };

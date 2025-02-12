@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 export const MidweekSection = () => {
   return (
     <section className={styles.section} id={'mid-week'}>
-      <h1 className={styles.mainHeader}><span className={styles.textColorOffset}>What's up</span> during the week?</h1>
+      <h1 className={styles.mainHeader}><span className={styles.textColorOffset}>{`What's up`}</span> during the week?</h1>
       <div className={styles.cardWrapper}>
         <div className={styles.card}>
           <div>

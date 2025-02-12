@@ -2,11 +2,24 @@
 
 import { useState } from "react";
 import styles from "./styles.module.css";
-import Accordion from "../bible-resources";
+
+type Resource = {
+  type: string;
+  url: string;
+  label: string;
+};
+
+type Session = {
+  title: string;
+  date: string;
+  videoUrl: string;
+  summary: string;
+  resources: Resource[];
+};
 
 const Sidebar = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [activeSession, setActiveSession] = useState(null);
+  const [activeSession, setActiveSession] = useState< Session | null>(null);
 
   const sessions = [
     {
@@ -41,7 +54,7 @@ const Sidebar = () => {
       },
   ];
 
-  const openModal = (session) => {
+  const openModal = (session: Session) => {
     setActiveSession(session);
     setModalOpen(true);
   };

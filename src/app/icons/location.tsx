@@ -1,4 +1,8 @@
-export const Location = ({ color }) => (
+type IconProps = {
+  color?: string; // Optional string prop for the color
+};
+
+export const Location: React.FC<IconProps> = ({ color = "black" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="36"

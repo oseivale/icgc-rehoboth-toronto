@@ -3,11 +3,18 @@
 import { useRef, useState } from "react";
 import styles from "./styles.module.css";
 
+type Event = {
+  date: string;
+  title: string;
+  time: string;
+  location: string;
+};
+
 const EventsPage = () => {
   const [activeTab, setActiveTab] = useState("upcoming");
   const [selectedMonth, setSelectedMonth] = useState(new Date());
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedEvents, setSelectedEvents] = useState([]);
+  const [selectedEvents, setSelectedEvents] = useState<Event[]>([]);
 
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +45,7 @@ const EventsPage = () => {
       "Join us for a day of worship, community, and fun activities for all ages.",
   };
 
-  const events = [
+  const events: Event[] = [
     {
       date: "2025-02-12",
       title: "Bible Study",
@@ -59,8 +66,6 @@ const EventsPage = () => {
     },
     // Add more events as needed
   ];
-
-  const [selectedDate, setSelectedDate] = useState("");
 
   const getEventsForDate = (date: string) =>
     events.filter((event) => event.date === date);

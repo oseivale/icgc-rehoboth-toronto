@@ -22,15 +22,15 @@ export const EventSection = () => {
           </h1>
           <ul className={styles.detailsList}>
             <li className={styles.detailItem}>
-              <span className={styles.icon}><Calendar /></span>
+              <span className={styles.icon}><Calendar color={'var(--rehoboth-dark-green)'} /></span>
               Aug 03, 2024
             </li>
             <li className={styles.detailItem}>
-              <span className={styles.icon}><Clock /></span>
+              <span className={styles.icon}><Clock color={'var(--rehoboth-dark-green)'} /></span>
               8:00 am - 5:00 pm
             </li>
             <li className={styles.detailItem}>
-              <span className={styles.icon}><Location /></span>
+              <span className={styles.icon}><Location color={'var(--rehoboth-dark-green)'} /></span>
               837 Wilson Ave, Toronto, ON
             </li>
           </ul>

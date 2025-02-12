@@ -1,4 +1,8 @@
-export const Calendar = ({color}) => (
+type IconProps = {
+  color?: string;
+};
+
+export const Calendar: React.FC<IconProps> = ({ color = "black" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="36"

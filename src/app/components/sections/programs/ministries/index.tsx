@@ -11,7 +11,7 @@ export const MinistriesSection = () => {
             Join our online services for live streams of Sunday worship, virtual
             Bible studies, and interactive prayer meetings from anywhere.
           </p>
-          <h1 className={styles.cardHeader}>Womens' Ministry</h1>
+          <h1 className={styles.cardHeader}>{`Womens' Ministry`}</h1>
         </div>
         <div className={styles.card}>
           <div className={styles.placeholder}></div>
@@ -19,7 +19,7 @@ export const MinistriesSection = () => {
             Join our online services for live streams of Sunday worship, virtual
             Bible studies, and interactive prayer meetings from anywhere.
           </p>
-          <h1 className={styles.cardHeader}>Mens' Fellowship</h1>
+          <h1 className={styles.cardHeader}>{`Mens' Fellowship`}</h1>
         </div>
 
         <div className={styles.card}>
@@ -28,7 +28,7 @@ export const MinistriesSection = () => {
             Join our online services for live streams of Sunday worship, virtual
             Bible studies, and interactive prayer meetings from anywhere.
           </p>
-          <h1 className={styles.cardHeader}>Childrens' Ministry</h1>
+          <h1 className={styles.cardHeader}>{`Childrens' Ministry`}</h1>
         </div>
       </div>
     </section>

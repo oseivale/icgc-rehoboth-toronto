@@ -9,8 +9,6 @@ Create a render engine to render the article in broken up and formatted paragrap
 import { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
-import { Arrow } from "@/app/icons/arrow";
-import { Chevron } from "@/app/icons/chevron";
 
 const BlogDetails = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -49,15 +47,15 @@ const BlogDetails = () => {
 
         <h3>Why Forgiveness Matters</h3>
         <p>
-          Holding onto resentment can weigh us down, preventing us from experiencing true peace.
+          {`Holding onto resentment can weigh us down, preventing us from experiencing true peace.
           The Bible reminds us in Matthew 6:14-15, "For if you forgive others their trespasses,
-          your heavenly Father will also forgive you."
+          your heavenly Father will also forgive you."`}
         </p>
 
         <h3>Practical Steps to Forgiveness</h3>
         <p>
-          Learning to forgive is a process, but with prayer and a heart open to God's guidance,
-          we can move toward healing.
+          {`Learning to forgive is a process, but with prayer and a heart open to God's guidance,
+          we can move toward healing.`}
         </p>
         <ul>
           <li><strong>Pray for Strength:</strong> Ask God to help you release bitterness.</li>
@@ -65,20 +63,20 @@ const BlogDetails = () => {
           <li><strong>Let Go of Anger:</strong> Understand that forgiveness does not mean excusing harm.</li>
         </ul>
 
-        <h3>God's Promise in Forgiveness</h3>
+        <h3>{`God's Promise in Forgiveness`}</h3>
         <p>
-          God’s love is limitless, and He calls us to reflect that love through forgiveness.
-          By forgiving, we not only set others free but also free ourselves from the burden of resentment.
+          {`God’s love is limitless, and He calls us to reflect that love through forgiveness.
+          By forgiving, we not only set others free but also free ourselves from the burden of resentment.`}
         </p>
 
         <blockquote className={styles.quote}>
-          "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you."
+          {`"Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you."`}
           <span> - Ephesians 4:32</span>
         </blockquote>
 
         <p>
-          As you move forward, remember that forgiveness is a journey, not a one-time event.
-          Embrace it with faith, and you will experience the fullness of God's love.
+          {`As you move forward, remember that forgiveness is a journey, not a one-time event.
+          Embrace it with faith, and you will experience the fullness of God's love.`}
         </p>
       </article>
 

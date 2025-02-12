@@ -31,7 +31,7 @@ export const ContactUs = () => {
               </div>
             </div>
             <div className={styles.contactCard}>
-              <span className={styles.icon}><Location /></span>
+              <span className={styles.icon}><Location color={'var(--rehoboth-dark-green)'} /></span>
               <div>
                 <p className={styles.contactTitle}>Visit our location</p>
                 <p className={styles.contactDetails}>837 Wilson Ave.</p>

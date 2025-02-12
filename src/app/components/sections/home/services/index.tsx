@@ -22,7 +22,7 @@ export const ServicesSection = () => {
     },
     {
       id: 3,
-      icon: <Calendar />,
+      icon: <Calendar color={'var(--rehoboth-dark-green)'} />,
       title: "SPECIAL EVENTS",
       description:
         "Join us for special events, including holiday services, picnics, and community fundraisers throughout the year.",
