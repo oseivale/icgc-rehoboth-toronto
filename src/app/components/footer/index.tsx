@@ -62,7 +62,7 @@ const Footer = () => (
             <Link href="/blog">Blog</Link>
           </li>
           <li>
-            <Link href="/upcoming-events">Upcoming Events</Link>
+            <Link href="/events">Upcoming Events</Link>
           </li>
         </ul>
       </div>
@@ -70,13 +70,13 @@ const Footer = () => (
         <h3>Programs</h3>
         <ul className={styles.linkList}>
           <li>
-            <Link href="/bible-study">Bible Study</Link>
+            <Link href="/programs/bible-study">Bible Study</Link>
           </li>
           <li>
-            <Link href="/prayer-meetings">Prayer Meetings</Link>
+            <Link href="/programs/prayer">Prayer Meetings</Link>
           </li>
           <li>
-            <Link href="/covenant-families">Covenant Families</Link>
+            <Link href="/programs/covenant-families">Covenant Families</Link>
           </li>
           <li>
             <Link href="/get-involved">Get Involved</Link>

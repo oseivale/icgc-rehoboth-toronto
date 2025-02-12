@@ -7,6 +7,7 @@ import { Hamburger } from "@/app/icons/hamburger";
 import Image from "next/image";
 import { Close } from "@/app/icons/close";
 import { Home } from "@/app/icons/home";
+import { Chevron } from "@/app/icons/chevron";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -36,7 +37,8 @@ export default function Navigation() {
           <Hamburger />
         </button>
         {/* Navigation Links - Desktop Only */}
-        <nav className={`${styles.navLinks} ${styles.desktopOnly}`}>
+
+        {/* <nav className={`${styles.navLinks} ${styles.desktopOnly}`}>
           <Link href="/about" className={styles.navLink}>
             About
           </Link>
@@ -49,7 +51,65 @@ export default function Navigation() {
           <Link href="/contact" className={styles.navLink}>
             Contact Us
           </Link>
-        </nav>
+        </nav> */}
+        <nav className={`${styles.navLinks} ${styles.desktopOnly}`}>
+  <div className={styles.navItem}>
+    <Link href="/about" className={styles.navLink}>
+      About
+    </Link>
+    {/* <div className={styles.subLinks}>
+      <Link href="/about/mission" className={styles.subLink}>
+        Our Mission
+      </Link>
+      <Link href="/about/team" className={styles.subLink}>
+        Our Team
+      </Link>
+      <Link href="/about/history" className={styles.subLink}>
+        Our History
+      </Link>
+    </div> */}
+  </div>
+
+  <div className={styles.navItem}>
+    <Link href="/blog" className={styles.navLink}>
+      Blog
+    </Link>
+    {/* <div className={styles.subLinks}>
+      <Link href="/blog/latest" className={styles.subLink}>
+        Latest Posts
+      </Link>
+      <Link href="/blog/categories" className={styles.subLink}>
+        Categories
+      </Link>
+    </div> */}
+  </div>
+
+  <div className={styles.navItem}>
+    <Link href="/programs" className={styles.navLink}>
+      Programs <Chevron />
+    </Link>
+    <div className={styles.subLinks}>
+      <Link href="/programs/bible-study" className={styles.subLink}>
+        Bible Study
+      </Link>
+      <Link href="/programs/prayer" className={styles.subLink}>
+        Prayer Sessions
+      </Link>
+      <Link href="/programs/covenant-families" className={styles.subLink}>
+        Covenant Families
+      </Link>
+      <Link href="/programs/events" className={styles.subLink}>
+        Events
+      </Link>
+    </div>
+  </div>
+
+  <div className={styles.navItem}>
+    <Link href="/contact" className={styles.navLink}>
+      Contact Us
+    </Link>
+  </div>
+</nav>
       </div>
 
       {/* Navigation Drawer (Left) */}

@@ -44,3 +44,12 @@
 .textColorOffset {
   color: var(--rehoboth-yellow);
 }
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    flex-direction: column;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+}

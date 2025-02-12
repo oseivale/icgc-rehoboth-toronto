@@ -1,0 +1,95 @@
+.blogDetails {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blogHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .blogImage {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .blogTitle {
+    font-size: 2rem;
+    color: #2d422d;
+  }
+  
+  .blogSubtitle {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 400;
+  }
+  
+  .blogMeta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  .blogContent {
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .blogContent h3 {
+    margin-top: 20px;
+    color: #2d422d;
+  }
+  
+  .blogContent ul {
+    padding-left: 20px;
+  }
+  
+  .blogContent ul li {
+    margin-bottom: 10px;
+  }
+  
+  .quote {
+    background: #efefef;
+    border-left: 5px solid #2d422d;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .blogFooter {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .backLink {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #2d422d;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .backLink:hover {
+    color: #375f37;
+  }
+  
+  .scrollTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--rehoboth-yellow);
+    color: var(--rehoboth-green);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .scrollTopButton:hover {
+    background: #375f37;
+  }

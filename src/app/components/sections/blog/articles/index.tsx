@@ -2,101 +2,72 @@
 
 import { useState } from "react";
 import styles from "./styles.module.css";
+import Link from "next/link";
+import { NoArticles } from "@/app/icons/no-articles";
 
-export const CardGrid = () => {
-  const cards = [
-    // {
-    //   image:
-    //     "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-    //   title: "This Week’s Sermon Embracing Forgiveness",
-    //   link: "#",
-    // },
-    // {
-    //   image:
-    //     "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-    //   title: "Join Us For The Christmas Eve Candlelight Service",
-    //   link: "#",
-    // },
-    // {
-    //   image:
-    //     "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-    //   title: "New Bible Study Series Starts This Sunday",
-    //   link: "#",
-    // },
-    // {
-    //   image:
-    //     "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-    //   title: "This Week’s Sermon Embracing Forgiveness",
-    //   link: "#",
-    // },
-    // {
-    //   image:
-    //     "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-    //   title: "Join Us For The Christmas Eve Candlelight Service",
-    //   link: "#",
-    // },
-    // {
-    //   image:
-    //     "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-    //   title: "New Bible Study Series Starts This Sunday",
-    //   link: "#",
-    // },
+type Card = {
+  image: string;
+  title: string;
+  date: string;
+  category: string;
+  link: string;
+};
+
+const CardGrid = () => {
+  const allCards: Card[] = [
     {
-      image:
-        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-
+      image: "path-to-image1.jpg",
       title: "This Week’s Sermon Embracing Forgiveness",
-      date: "2024-11-12",
-      link: "#",
+      date: "2025-01-12",
+      category: "Sermon",
+      link: "/blog/1",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-
+      image: "path-to-image2.jpg",
       title: "Join Us For The Christmas Eve Candlelight Service",
       date: "2024-12-24",
-      link: "#",
+      category: "Event",
+      link: "/blog/2",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-
+      image: "path-to-image3.jpg",
       title: "New Bible Study Series Starts This Sunday",
       date: "2025-01-15",
-      link: "#",
+      category: "Bible Study",
+      link: "/blog/3",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-
+      image: "path-to-image1.jpg",
       title: "This Week’s Sermon Embracing Forgiveness",
-      date: "2025-01-22",
-      link: "#",
+      date: "2025-01-12",
+      category: "Sermon",
+      link: "/blog/4",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-
+      image: "path-to-image2.jpg",
       title: "Join Us For The Christmas Eve Candlelight Service",
-      date: "2025-01-31",
-      link: "#",
+      date: "2024-12-24",
+      category: "Event",
+      link: "/blog/5",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1623697899817-2e067e4a4036?q=80&w=1865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with actual image URL
-
+      image: "path-to-image3.jpg",
       title: "New Bible Study Series Starts This Sunday",
-      date: "2025-02-15",
-      link: "#",
+      date: "2025-01-15",
+      category: "Bible Study",
+      link: "/blog/6",
     },
+    // Add more cards...
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
   const [monthFilter, setMonthFilter] = useState("");
+  const [yearFilter, setYearFilter] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
 
-  const filteredCards = cards.filter((card) => {
+  const filteredCards = allCards.filter((card) => {
     const matchesSearch = card.title
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -105,7 +76,14 @@ export const CardGrid = () => {
           .toLocaleString("default", { month: "long" })
           .toLowerCase() === monthFilter.toLowerCase()
       : true;
-    return matchesSearch && matchesMonth;
+    const matchesYear = yearFilter
+      ? new Date(card.date).getFullYear().toString() === yearFilter
+      : true;
+    const matchesCategory = categoryFilter
+      ? card.category.toLowerCase() === categoryFilter.toLowerCase()
+      : true;
+
+    return matchesSearch && matchesMonth && matchesYear && matchesCategory;
   });
 
   const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
@@ -114,39 +92,32 @@ export const CardGrid = () => {
     currentPage * itemsPerPage
   );
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    setSearchTerm(event.target.value);
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSearchTerm(e.target.value);
     setCurrentPage(1);
   };
 
-  const handleFilter = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setMonthFilter(event.target.value);
+  const handleMonthFilter = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    setMonthFilter(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const handleYearFilter = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    setYearFilter(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const handleCategoryFilter = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ): void => {
+    setCategoryFilter(e.target.value);
     setCurrentPage(1);
   };
 
   return (
-    // <section className={styles.cardGridSection}>
-    //   <div className={styles.grid}>
-    //     {cards.map((card, index) => (
-    //       <div key={index} className={styles.card}>
-    //         <img src={card.image} alt={card.title} className={styles.image} />
-    //         <div className={styles.cardContent}>
-    //           <h3 className={styles.title}>{card.title}</h3>
-    //           <a href={card.link} className={styles.link}>
-    //             Read More <span className={styles.arrow}>➜</span>
-    //           </a>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </section>
-
     <section className={styles.cardGridSection}>
-      <h1 className={styles.heading}>
-        Search for an article by title, 
-        <span className={styles.highlight}> or filter by month</span>
-      </h1>
-      <div className={styles.filters}>
+      <div className={styles.sidebar}>
+        <h3>Search & Filter Articles</h3>
         <input
           type="text"
           placeholder="Search by title..."
@@ -154,12 +125,9 @@ export const CardGrid = () => {
           onChange={handleSearch}
           className={styles.searchInput}
         />
-        {/* <label className={styles.monthFilterLabel}>
-            Filter By Month
-        </label> */}
         <select
           value={monthFilter}
-          onChange={handleFilter}
+          onChange={handleMonthFilter}
           className={styles.filterDropdown}
         >
           <option value="">All Months</option>
@@ -182,39 +150,75 @@ export const CardGrid = () => {
             </option>
           ))}
         </select>
+        <select
+          value={yearFilter}
+          onChange={handleYearFilter}
+          className={styles.filterDropdown}
+        >
+          <option value="">All Years</option>
+          {[2024, 2025].map((year) => (
+            <option key={year} value={year.toString()}>
+              {year}
+            </option>
+          ))}
+        </select>
+        <select
+          value={categoryFilter}
+          onChange={handleCategoryFilter}
+          className={styles.filterDropdown}
+        >
+          <option value="">All Categories</option>
+          {["Sermon", "Event", "Bible Study"].map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
       </div>
-      <div className={styles.grid}>
-        {paginatedCards.map((card, index) => (
-          <div key={index} className={styles.card}>
-            <img src={card.image} alt={card.title} className={styles.image} />
-            <div className={styles.cardContent}>
-              <h3 className={styles.title}>{card.title}</h3>
-              <p className={styles.date}>
-                {new Date(card.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+      <div className={styles.gridWrapper}>
+        <div className={styles.grid}>
+          {filteredCards.length > 0 ? (
+            paginatedCards.map((card, index) => (
+              <Link key={index} href={card.link} className={styles.card}>
+                {/* <img src={card.image} alt={card.title} className={styles.image} /> */}
+                <div className={styles.placeholder}></div>
+                <div className={styles.cardContent}>
+                  <h3 className={styles.title}>{card.title}</h3>
+                  <p className={styles.date}>
+                    {new Date(card.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </p>
+                  <span className={styles.link}>
+                    Read More <span className={styles.arrow}>➜</span>
+                  </span>
+                </div>
+              </Link>
+            ))
+          ) : (
+            <div className={styles.noResults}>
+              <NoArticles />
+              <p className={styles.noResultsText}>
+                No articles found. Try adjusting your search or filters.
               </p>
-              <a href={card.link} className={styles.link}>
-                Read More <span className={styles.arrow}>➜</span>
-              </a>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className={styles.pagination}>
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <button
-            key={page}
-            className={`${styles.pageButton} ${
-              currentPage === page ? styles.activePage : ""
-            }`}
-            onClick={() => setCurrentPage(page)}
-          >
-            {page}
-          </button>
-        ))}
+          )}
+        </div>
+        <div className={styles.pagination}>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              className={`${styles.pageButton} ${
+                currentPage === page ? styles.activePage : ""
+              }`}
+              onClick={() => setCurrentPage(page)}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

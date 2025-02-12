@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 export const CovenantFamiliesSection = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={'covenant-families'}>
       <h1 className={styles.mainHeader}>
         Church<span className={styles.textColorOffset}> Covenant Families</span>{" "}
       </h1>

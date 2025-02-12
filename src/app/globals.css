@@ -5,6 +5,7 @@
   --rehoboth-white: #ffffff;
   --rehoboth-grey: #ececec;
 
+  --rehoboth-light-yellow: #fff8e5; 
 
   --naamani-black: #3c3840;
 
@@ -17,6 +18,10 @@
   --font-default: 'Fira Sans', 'sans-serif'; /* Default font */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* font-family: var(--font-geist-sans), sans-serif; */
   font-family: var(--font-fira-sans), sans-serif;
@@ -26,7 +31,7 @@ body {
 .pageContainer {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 80vh;
+  min-height: 40vh;
 }
 
 

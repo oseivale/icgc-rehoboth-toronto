@@ -52,8 +52,8 @@
 }
 
 .logoImg {
-    height: 45px;
-    width: auto;
+  height: 45px;
+  width: auto;
 }
 
 /* Mobile-Only and Desktop-Only Classes */
@@ -68,11 +68,15 @@
 /* Navigation Links */
 .navLinks {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0rem;
   color: var(--rehoboth-white);
 }
 
 .navLink {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
   text-decoration: none;
   color: var(--rehoboth-white);
   font-size: 1.2rem;
@@ -80,23 +84,28 @@
   font-family: var(--font-fira-sans), sans-serif;
   text-transform: uppercase;
   font-weight: 600;
+  transition: all 450ms ease;
+}
+
+.navLink svg {
+    transform: rotate(180deg);
 }
 
 .backToHome {
-    margin: .5rem;
-    text-decoration: none;
+  margin: 0.5rem;
+  text-decoration: none;
 }
 
-.backToHome span{
-    color: var(--rehoboth-white);
-    display: flex;
-    align-items: center;
-    gap: .75rem;
+.backToHome span {
+  color: var(--rehoboth-white);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
-
+/* 
 .navLink:hover {
   text-decoration: underline;
-}
+} */
 
 /* Cart Icon */
 .cart {
@@ -307,14 +316,13 @@
   .navLink {
     margin: 0.5rem;
     font-size: 1.75rem;
-    color: var(--naamani-purple);
   }
   .mobileOnly {
     display: flex;
     align-items: center;
   }
 
-  .desktopOnly {
+  .desktopOnly.navLinks {
     display: none;
   }
 
@@ -337,4 +345,58 @@
     flex-grow: unset;
     text-align: left;
   }
+}
+
+.navLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navItem {
+  position: relative; /* Required for the dropdown */
+}
+
+.navLink {
+  font-size: 1rem;
+  text-decoration: none;
+  /* color: #333; */
+  /* padding: 10px 15px; */
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  /* text-decoration: underline; */
+  /* color: #2d422d; Highlight color on hover */
+}
+
+.subLinks {
+  display: none; /* Hidden by default */
+  position: absolute; /* Dropdown positioning */
+  top: 80%; /* Position below the main link */
+  left: 0;
+  background-color: #fff;
+  /* padding: 10px 0; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
+  border-radius: 3px;
+  z-index: 10; /* Ensure it appears above other content */
+  flex-direction: column;
+  gap: 5px;
+  /* margin-top: 0.5rem; */
+}
+
+.subLink {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subLink:hover {
+  background-color: #f0f0f0; /* Background on hover */
+  color: #2d422d; /* Text color on hover */
+}
+
+.navItem:hover .subLinks {
+  display: flex; /* Show sublinks on hover */
 }

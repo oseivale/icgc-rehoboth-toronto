@@ -1,8 +1,12 @@
+"use client";
 
-export default function BlogArticle() {
-    return (
-      <div style={{paddingTop: '7rem'}}>
-        <h1 className="pageContainer">BLOG ARTICLE</h1>
-      </div>
-    );
-  }
+import PageWrapper from "@/app/components/page-wrapper";
+import BlogDetails from "@/app/components/sections/blog/article";
+
+export default function BlogDetailPage() {
+  return (
+    <PageWrapper header={"ARTICLE"}>
+      <BlogDetails />
+    </PageWrapper>
+  );
+};

@@ -1,0 +1,144 @@
+.section {
+  min-height: 15vh;
+  padding: 3rem 0;
+}
+
+.mainHeader {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  /* padding: 0 0 2rem 0; */
+  color: var(--rehoboth-white);
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+}
+
+.cardWrapper {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.contentWrapper {
+  display: grid;
+  padding: 3rem 0;
+  /* grid-template-columns: 1fr 3fr; */
+}
+
+.infoWrapper {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  /* border: 1px solid #ccc; */
+  /* max-width: 50%; */
+  grid-gap: 2rem;
+  /* padding: 0.75rem; */
+  border-radius: 8px;
+  display: grid;
+  /* padding: 0 2rem; */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card p {
+color: var(--rehoboth-white);
+}
+
+.placeholder {
+  height: 350px;
+  background-color: grey;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.cardHeader {
+  font-weight: bold;
+  letter-spacing: 0.1;
+  color: var(--rehoboth-white);
+  margin: 0;
+}
+
+.cardSubheader {
+  font-weight: bold;
+  letter-spacing: 0.1;
+  font-size: 1rem;
+  color: var(--rehoboth-white);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.textColorOffset {
+  color: var(--rehoboth-yellow);
+}
+
+.eventInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--rehoboth-white);
+}
+
+.viewAll {
+  /* padding: 0 15px; */
+  font-family: "Fira Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: #ffce00; /* Yellow */
+  color: #2d422d; /* Dark Green */
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  width: 140px;
+  text-decoration: none;
+  margin: 2rem 0;
+}
+
+.viewAll:hover {
+  background-color: var(--rehoboth-dark-green); /* Lighter Yellow */
+  color: var(--rehoboth-white);
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+  background-color: var(--rehoboth-white);
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+}
+
+.bibleStudySection {
+  background-color: var(--rehoboth-dark-green);
+  padding: 3rem 0;
+}
+
+.viewAll:hover .arrow {
+  transform: translateX(5px);
+  color: var(--rehoboth-dark-green);
+}
+
+.sidebarWrapper {
+  margin: 0 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
