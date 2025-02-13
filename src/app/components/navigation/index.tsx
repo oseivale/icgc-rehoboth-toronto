@@ -11,6 +11,8 @@ import { Chevron } from "@/app/icons/chevron";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
+
 
   return (
     <header className={styles.header}>
@@ -53,11 +55,11 @@ export default function Navigation() {
           </Link>
         </nav> */}
         <nav className={`${styles.navLinks} ${styles.desktopOnly}`}>
-  <div className={styles.navItem}>
-    <Link href="/about" className={styles.navLink}>
-      About
-    </Link>
-    {/* <div className={styles.subLinks}>
+          <div className={styles.navItem}>
+            <Link href="/about" className={styles.navLink}>
+              About
+            </Link>
+            {/* <div className={styles.subLinks}>
       <Link href="/about/mission" className={styles.subLink}>
         Our Mission
       </Link>
@@ -68,13 +70,13 @@ export default function Navigation() {
         Our History
       </Link>
     </div> */}
-  </div>
+          </div>
 
-  <div className={styles.navItem}>
-    <Link href="/blog" className={styles.navLink}>
-      Blog
-    </Link>
-    {/* <div className={styles.subLinks}>
+          <div className={styles.navItem}>
+            <Link href="/blog" className={styles.navLink}>
+              Blog
+            </Link>
+            {/* <div className={styles.subLinks}>
       <Link href="/blog/latest" className={styles.subLink}>
         Latest Posts
       </Link>
@@ -82,34 +84,37 @@ export default function Navigation() {
         Categories
       </Link>
     </div> */}
-  </div>
+          </div>
 
-  <div className={styles.navItem}>
-    <Link href="/programs" className={styles.navLink}>
-      Programs <Chevron />
-    </Link>
-    <div className={styles.subLinks}>
-      <Link href="/programs/bible-study" className={styles.subLink}>
-        Bible Study
-      </Link>
-      <Link href="/programs/prayer" className={styles.subLink}>
-        Prayer Sessions
-      </Link>
-      <Link href="/programs/covenant-families" className={styles.subLink}>
-        Covenant Families
-      </Link>
-      <Link href="/programs/events" className={styles.subLink}>
-        Events
-      </Link>
-    </div>
-  </div>
+          <div className={styles.navItem}>
+            <Link href="/programs" className={styles.navLink}>
+              Programs <Chevron />
+            </Link>
+            <div className={styles.subLinks}>
+              <Link href="/programs/bible-study" className={styles.subLink}>
+                Bible Study
+              </Link>
+              <Link href="/programs/prayer" className={styles.subLink}>
+                Prayer Sessions
+              </Link>
+              <Link
+                href="/programs/covenant-families"
+                className={styles.subLink}
+              >
+                Covenant Families
+              </Link>
+              <Link href="/programs/events" className={styles.subLink}>
+                Events
+              </Link>
+            </div>
+          </div>
 
-  <div className={styles.navItem}>
-    <Link href="/contact" className={styles.navLink}>
-      Contact Us
-    </Link>
-  </div>
-</nav>
+          <div className={styles.navItem}>
+            <Link href="/contact" className={styles.navLink}>
+              Contact Us
+            </Link>
+          </div>
+        </nav>
       </div>
 
       {/* Navigation Drawer (Left) */}
@@ -138,12 +143,31 @@ export default function Navigation() {
             <Link href="/programs" className={styles.navLink}>
               Programs
             </Link>
+               {/* Programs Dropdown */}
+          <div className={styles.dropdown}>
+              <div className={styles.submenu}>
+                <Link href="/programs/bible-study" className={styles.submenuItem}>
+                 Bible Study
+                </Link>
+                <Link href="/programs/prayer" className={styles.submenuItem}>
+                  Prayer Meetings
+                </Link>
+                <Link href="/programs/covenant-families" className={styles.submenuItem}>
+                  Covenant Families
+                </Link>
+                <Link href="/programs/events" className={styles.submenuItem}>
+                  Events
+                </Link>
+              </div>
+            
+          </div>
             <Link href="/contact" className={styles.navLink}>
               Contact Us
             </Link>
             <Link href="/" className={styles.backToHome}>
-                <span><Home /> Back to Home</span>
-              
+              <span>
+                <Home /> Back to Home
+              </span>
             </Link>
           </nav>
         </div>

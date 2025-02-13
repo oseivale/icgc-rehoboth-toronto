@@ -11,7 +11,7 @@ import { Arrow } from "@/app/icons/arrow";
 export const BibleStudySection = () => {
   return (
     <section className={styles.section} id={"mid-week"}>
-      <div>
+      <div className={styles.latestSession}>
         <SermonsSection />
       </div>
       <div className={styles.bibleStudySection}>

@@ -84,6 +84,11 @@ color: var(--rehoboth-white);
   color: var(--rehoboth-white);
 }
 
+.latestSession {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .viewAll {
   /* padding: 0 15px; */
   font-family: "Fira Sans", sans-serif;
@@ -140,5 +145,26 @@ color: var(--rehoboth-white);
   .contentWrapper {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .infoWrapper {
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    /* border: 1px solid #ccc; */
+    /* max-width: 50%; */
+    grid-gap: 2rem;
+    /* padding: 0.75rem; */
+    border-radius: 8px;
+    display: grid;
+    /* padding: 0 2rem; */
+    grid-template-columns: 1fr
+  }
+
+  .sidebarWrapper {
+    margin: 0;
   }
 }
