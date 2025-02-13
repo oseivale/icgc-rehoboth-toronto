@@ -11,8 +11,6 @@ import { Chevron } from "@/app/icons/chevron";
 
 export default function Navigation() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
-
 
   return (
     <header className={styles.header}>
@@ -143,24 +141,29 @@ export default function Navigation() {
             <Link href="/programs" className={styles.navLink}>
               Programs
             </Link>
-               {/* Programs Dropdown */}
-          <div className={styles.dropdown}>
+            {/* Programs Dropdown */}
+            <div className={styles.dropdown}>
               <div className={styles.submenu}>
-                <Link href="/programs/bible-study" className={styles.submenuItem}>
-                 Bible Study
+                <Link
+                  href="/programs/bible-study"
+                  className={styles.submenuItem}
+                >
+                  Bible Study
                 </Link>
                 <Link href="/programs/prayer" className={styles.submenuItem}>
                   Prayer Meetings
                 </Link>
-                <Link href="/programs/covenant-families" className={styles.submenuItem}>
+                <Link
+                  href="/programs/covenant-families"
+                  className={styles.submenuItem}
+                >
                   Covenant Families
                 </Link>
                 <Link href="/programs/events" className={styles.submenuItem}>
                   Events
                 </Link>
               </div>
-            
-          </div>
+            </div>
             <Link href="/contact" className={styles.navLink}>
               Contact Us
             </Link>
