@@ -405,7 +405,7 @@
   background-color: #fff;
   /* padding: 10px 0; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
-  border-radius: 3px;
+  border-radius: 5px;
   z-index: 10; /* Ensure it appears above other content */
   flex-direction: column;
   gap: 5px;
@@ -420,11 +420,26 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* .subLink{
+  border-radius: 5px;
+} */
+
+
+.subLink:nth-child(4){
+  border-radius: 0 0 5px 5px;
+}
+
+.subLink:nth-child(1){
+  border-radius: 5px 5px 0 0;
+}
+
 .subLink:hover {
   background-color: #f0f0f0; /* Background on hover */
   color: #2d422d; /* Text color on hover */
 }
 
 .navItem:hover .subLinks {
+  border-radius: 5px;
+
   display: flex; /* Show sublinks on hover */
 }

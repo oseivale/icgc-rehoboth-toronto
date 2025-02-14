@@ -233,4 +233,8 @@
   .calendarWrapper {
     width: 90%;
   }
+
+  .day {
+    padding: 5px;
+  }
 }
